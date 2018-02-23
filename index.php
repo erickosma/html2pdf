@@ -1,43 +1,42 @@
-<?php
-require __DIR__.'/vendor/autoload.php';
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulação php pdf</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-use Spipu\Html2Pdf\Html2Pdf;
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-$html2pdf = new Html2Pdf();
-$html ='
-        <h1>HelloWorld</h1>
-        This is my first test
-        <table border="1">
-            <thead>
-                <tr >
-                    <th>#</th>
-                    <th>Col 1</th>
-                    <th>Col 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>teste 1</td>
-                    <td>teste col 2</td>
-                </tr>
-            </tbody>
-        </table>
-';
-/*
-$tr ="";
-for ($i=0;$i < 300; $i++){
-    $tr .= '<tr>
-                    <td>1</td>
-                    <td>teste 1</td>
-                    <td>teste col 2</td>
-                </tr>';
-}
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
 
-$html =  str_replace("##tr##",$tr,$html);
-*/
-$html2pdf->writeHTML($html);
-$html2pdf->output();
+<body>
+
+<div class="container">
+    <h1 >Conteudo</h1>
+    <h3>Exemplos</h3>
+    <div class="list-group">
+        <a href="src/examples/simple.php" class="list-group-item">Html simples</a>
+        <a href="src/examples/page.php" class="list-group-item">Página</a>
+     <!--   <a href="src/examples/head.php" class="list-group-item">Cabeçãho nas páginas</a>  -->
+    </div>
+    <!-- <h3>Extrair imagens</h3>
+    <div class="list-group">
+        <a href="#" class="list-group-item">Extrair texto do PDF</a>
+        <a href="#" class="list-group-item">Extrair texto do PDF por página</a>
+    </div>
+    -->
+</div>
+
+
+</body>
+
+</html>
+
 
 
 
