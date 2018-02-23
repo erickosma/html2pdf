@@ -1,4 +1,5 @@
-#Html2Pdf
+
+# Html2Pdf
 
 Um pequeno exemplo de como converter html para pdf usando PHP
 
@@ -14,14 +15,14 @@ Tags específicas foram implementadas, para adaptar o padrão html a um uso de P
 
 
 
-##instalação 
+## instalação 
 Você só precisa iniciar o seguinte comando na pasta raiz do seu projeto:
 
 ```
 composer require spipu/html2pdf
 ```
 
-##Uso
+## Uso
 
 Um exemplo  *HelloWorld*
 
@@ -70,7 +71,7 @@ $margins     | array(5, 5, 5, 8) | Main margins of the page (left, top, right, b
 
 
 
-####Exemplo 
+#### Exemplo 
 
 ```php
 <?php
@@ -79,7 +80,7 @@ $html2pdf = new Html2Pdf($orientation = 'P', $format = 'A4',$lang = 'pt_BR',$uni
 
 ```
 
-###Página
+### Página
 
 Este biblioteca preve algumas tags extras oara facilitar a construção do **PDF**
 
@@ -111,22 +112,22 @@ $pdf->Output();
 ```
 
 
-###Saída
+### Saída
 
-#####Renderiza pdf no broweser
+##### Renderiza pdf no broweser
 
 ```php
 $html2pdf->output(); 
 ```
 
 
-#####Renderiza pdf no broweser especificando nome.
+##### Renderiza pdf no broweser especificando nome.
 
 ```php
 $html2pdf->output("name.pdf"); 
 ```
 
-#####Força download
+##### Força download
 ```php
 $html2pdf->output('file.pdf', 'D'); 
 ```
